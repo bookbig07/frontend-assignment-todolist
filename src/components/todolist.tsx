@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 type typeList = {
   type: string;
@@ -146,46 +146,46 @@ export default function Todolist() {
 
   return (
     <>
-      <div className=' flex flex-row gap-6'>
+      <div className='flex flex-row gap-6'>
         <div className="max-w-full p-8 bg-white rounded-lg shadow-lg w-96 h-[40rem] overflow-auto">
-          <div className="flex items-center justify-center mb-6">
-            <h4 className="font-semibold text-lg">Todo List</h4>
+          <div className="flex items-center justify-center mb-4 bg-[#E2E6F6] p-4 rounded-lg">
+            <h4 className="font-bold text-lg text-[#016BA1]">Todo List</h4>
           </div>
           {state.items.map((item,index) => (
             <div
               key={index}
               onClick={() => handleItemClick(index)}
-              className="flex items-center justify-center h-10 px-3 rounded cursor-pointer hover:bg-gray-100"
+              className="flex items-center justify-center h-10 px-3 rounded cursor-pointer hover:scale-110 hover:bg-gray-100 transition-opacity duration-300 ease-in-out"
             >
-              <span>{item.name}</span>
+              <span className='font-medium text-[#016BA1]'>{item.name}</span>
             </div>
           ))}
         </div>
         <div className="max-w-full p-8 bg-white rounded-lg shadow-lg w-96 h-[40rem] overflow-auto">
-          <div className="flex items-center justify-center mb-6">
-            <h4 className="font-semibold text-lg">Fruit</h4>
+          <div className="flex items-center justify-center mb-4 bg-[#E2E6F6] p-4 rounded-lg">
+            <h4 className="font-bold text-lg text-[#016BA1]">Fruit</h4>
           </div>
           {state.fruitList.map((item,index) => (
             <div
               key={index}
               onClick={() => handleBack('Fruit',index)}
-              className="flex items-center justify-center h-10 px-3 rounded cursor-pointer hover:bg-gray-100"
+              className="flex items-center justify-center h-10 px-3 rounded cursor-pointer hover:scale-110 hover:bg-gray-100 transition-opacity duration-300 ease-in-out"
             >
-              <span>{item.name}</span>
+              <span className='font-medium text-[#016BA1]'>{item.name}</span>
             </div>
           ))}
         </div>
         <div className="max-w-full p-8 bg-white rounded-lg shadow-lg w-96 h-[40rem] overflow-auto">
-          <div className="flex items-center justify-center mb-6">
-            <h4 className="font-semibold text-lg">Vegetable</h4>
+          <div className="flex items-center justify-center mb-4 bg-[#E2E6F6] p-4 rounded-lg">
+            <h4 className="font-bold text-lg text-[#016BA1]">Vegetable</h4>
           </div>
           {state.vegetableList.map((item,index) => (
             <div
               key={index}
               onClick={() => handleBack('Vegetable',index)}
-              className="flex items-center justify-center h-10 px-3 rounded cursor-pointer hover:bg-gray-100"
+              className="flex items-center justify-center h-10 px-3 rounded cursor-pointer hover:scale-110 hover:bg-gray-100 transition-opacity duration-300 ease-in-out"
             >
-              <span>{item.name}</span>
+              <span className='font-medium text-[#016BA1]'>{item.name}</span>
             </div>
           ))}
         </div>
